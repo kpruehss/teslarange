@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import TeslaCar from '../components/TeslaCar';
+import Wheel from '../components/Wheel';
 
 const StyledForm = styled.form`
   text-align: center;
@@ -26,6 +27,7 @@ class Form extends Component {
       <StyledForm>
         <StyledH1>Range Per Charge</StyledH1>
         <TeslaCar />
+        <Wheel />
       </StyledForm>
     );
   }

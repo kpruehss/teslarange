@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import logo from 'assets/logo.svg';
-import Form from '../containers/Form';
+import Form from 'containers/Form';
+import Wrapper from 'components/Wrapper';
 
 const StyledHeader = styled.header`
   padding: 25px 0;
@@ -12,10 +13,6 @@ const StyledHeader = styled.header`
   width: 100%;
   box-sizing: border-box;
   font: 300 14px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
-`;
-
-const Wrapper = styled.div`
-  margin: 100px 0 150px;
 `;
 
 const Logo = styled.img`
