@@ -1,24 +1,21 @@
-html {
+html body {
   margin: 0;
   padding: 0;
 }
-.header {
-  padding: 25px 0;
-  text-align: center;
-  background: #222;
+
+.container {
   width: 100%;
-  box-sizing: border-box;
-  margin: 0;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.form  h1 {
-  font-size: 38px;
-}
-
-.logo {
-  width: 100px;
-  height: 13px;
-}
+/* .tesla-car {
+  background: #fff;
+  background-image: url(assets/tesla.jpg);
+  background-size: contain;
+} */
 
 /* @font-face {
   font-family: 'RobotoNormal';
@@ -31,13 +28,13 @@ html {
   font-style: normal;
 } */
 
-*, *:before, *:after {
+/* *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font: 300 14px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-}
+} */
 
 /* .cf:before,
 .cf:after {

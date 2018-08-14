@@ -1,13 +1,34 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+import TeslaCar from '../components/TeslaCar';
 
-export default class Form extends Component {
+const StyledForm = styled.form`
+  text-align: center;
+`;
+
+const StyledH1 = styled.h1`
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 38px;
+  letter-spacing: 3px;
+`;
+// const Container = styled.div`
+//   width: 100%;
+//   padding-right: 15px;
+//   padding-left: 15px;
+//   margin-right: auto;
+//   margin-left: auto;
+// `;
+class Form extends Component {
   render() {
     return (
-      <form>
-        <div className="container">
-          <h1 className="form form-heading">Range per charge</h1>
-        </div>
-      </form>
+      <StyledForm>
+        <StyledH1>Range Per Charge</StyledH1>
+        <TeslaCar />
+      </StyledForm>
     );
   }
 }
+
+export default Form;
