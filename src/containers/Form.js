@@ -4,12 +4,12 @@ import TeslaCar from '../components/TeslaCar';
 import Wheel from '../components/Wheel';
 import StatTable from '../components/StatTable';
 
-const StyledForm = styled.form`
-  text-align: center;
-`;
+// const StyledForm = styled.form`
+//   text-align: center;
+// `;
 
 const StyledH1 = styled.h1`
-  display: block;
+  /* display: block; */
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
   font-size: 38px;
@@ -25,12 +25,10 @@ const StyledH1 = styled.h1`
 class Form extends Component {
   render() {
     return (
-      <StyledForm>
+      <form className="tesla-car">
         <StyledH1>Range Per Charge</StyledH1>
-        <TeslaCar>
-          <StatTable />
-        </TeslaCar>
-      </StyledForm>
+        <TeslaCar/>
+      </form>
     );
   }
 }
