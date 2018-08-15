@@ -9,10 +9,18 @@ html body {
   margin: 0 auto;
 }
 
+.tesla-controls {
+  display: block;
+  width: 100%;
+}
+
 .tesla-stats {
   margin: -70px 0 30px;
 }
 
+.wrapper {
+  margin: 100px 0 150px;
+}
 .container {
   width: 100%;
   padding-right: 15px;
@@ -29,6 +37,13 @@ html body {
   -webkit-font-smoothing: antialiased;
 }
 
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
 /* @font-face {
   font-family: 'RobotoNormal';
   src: url('Roboto-Regular-webfont.eot');

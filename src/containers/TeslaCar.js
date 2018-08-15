@@ -36,7 +36,7 @@ const Icon = styled.div`
   height: 20px;
 `;
 
-const Item = styled.li`
+const ListItem = styled.li`
   display: inline-block;
   width: 130px;
   position: relative;
@@ -62,36 +62,38 @@ const Result = styled.p `
   };
 `;
 
+// TODO: Add wheels and refactor into StatsTable Component
+
 const TeslaCar = () => {
   return (
     <div>
       <Car />
       <div className="tesla-stats">
         <List>
-          <Item>
+          <ListItem>
             <Icon url={T60}/>
             <Result>100</Result>
-          </Item>
-          <Item>
+          </ListItem>
+          <ListItem>
             <Icon url={T60d}/>
             <Result>100</Result>
-          </Item>
-          <Item>
+          </ListItem>
+          <ListItem>
             <Icon url={T75}/>
             <Result>100</Result>
-          </Item>
-          <Item>
+          </ListItem>
+          <ListItem>
             <Icon url={T75d}/>
             <Result>100</Result>
-          </Item>
-          <Item>
+          </ListItem>
+          <ListItem>
             <Icon url={T90d}/>
             <Result>100</Result>
-          </Item>
-          <Item>
+          </ListItem>
+          <ListItem>
             <Icon url={P100d}/>
             <Result>100</Result>
-          </Item>
+          </ListItem>
         </List>
       </div>
     </div>

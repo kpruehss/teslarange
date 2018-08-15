@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import TeslaCar from '../components/TeslaCar';
+import TeslaCar from './TeslaCar';
 import Wheel from '../components/Wheel';
 import StatTable from '../components/StatTable';
+
+import data from 'data.json';
+import TeslaControl from 'containers/TeslaControl';
 
 // const StyledForm = styled.form`
 //   text-align: center;
@@ -23,11 +26,17 @@ const StyledH1 = styled.h1`
 //   margin-left: auto;
 // `;
 class Form extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {data};
+  }
   render() {
     return (
       <form className="tesla-car">
         <StyledH1>Range Per Charge</StyledH1>
-        <TeslaCar/>
+        <TeslaCar />
+        <TeslaControl data={this.state} />
       </form>
     );
   }
