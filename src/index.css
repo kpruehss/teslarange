@@ -9,13 +9,47 @@ html body {
   margin: 0 auto;
 }
 
-.tesla-controls {
+.notice {
+  margin: 20px 0;
+  color: #666;
+}
+
+/* .tesla-controls {
   display: block;
   width: 100%;
-}
+} */
+
+/* .speed-counter {
+  outline: 0;
+  width: 30px;
+  color: #008dff;
+  cursor: pointer;
+  display: block;
+  padding: 11px 0;
+  border: 0;
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+} */
 
 .tesla-stats {
   margin: -70px 0 30px;
+}
+
+.control-buttons {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  align-items: flex-start;
+  text-align: center;
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
 }
 
 .wrapper {

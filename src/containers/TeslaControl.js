@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import ControlButton from '../components/ControlButton';
+import Disclaimer from '../components/Disclaimer';
+
 
 const TeslaSpeed = styled.div`
   float: left;
   width: 230px;
+  ::before {
+    content: '';
+    display: table;
+  };
+  ::after {
+    clear: both;
+  };
 `;
 
 const ControlTitle = styled.div`
@@ -25,6 +35,7 @@ const ControlItem = styled.div`
   background-size: 44px;
 `;
 
+
 class TeslaControl extends Component {
   constructor(props) {
     super(props);
@@ -36,10 +47,14 @@ class TeslaControl extends Component {
       <div className="tesla-controls">
         <TeslaSpeed>
           <ControlTitle>Speed</ControlTitle>
-          <ControlItem />
+          <ControlItem className="control-buttons">
+            <ControlButton up />
+            <ControlButton />
+          </ControlItem>
         </TeslaSpeed>
+        <Disclaimer />
       </div>
     );
   }
 }
-export default  TeslaControl;
+export default TeslaControl;
