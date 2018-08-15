@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import TeslaCar from '../components/TeslaCar';
 import Wheel from '../components/Wheel';
+import StatTable from '../components/StatTable';
 
 const StyledForm = styled.form`
   text-align: center;
@@ -26,8 +27,9 @@ class Form extends Component {
     return (
       <StyledForm>
         <StyledH1>Range Per Charge</StyledH1>
-        <TeslaCar />
-        <Wheel />
+        <TeslaCar>
+          <StatTable />
+        </TeslaCar>
       </StyledForm>
     );
   }

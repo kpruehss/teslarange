@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import logo from 'assets/logo.svg';
-import Form from 'containers/Form';
-import Wrapper from 'components/Wrapper';
+
 
 const StyledHeader = styled.header`
   padding: 25px 0;
@@ -20,15 +19,12 @@ const Logo = styled.img`
   height: 13px;
 `;
 
-export default () => {
+const Header = () => {
   return (
-    <div>
-      <StyledHeader>
-        <Logo src={logo} alt="Tesla"/>
-      </StyledHeader>
-      <Wrapper>
-        <Form />
-      </Wrapper>
-    </div>
+    <StyledHeader>
+      <Logo src={logo} alt="Tesla"/>
+    </StyledHeader>
   );
 };
+
+export default Header;
