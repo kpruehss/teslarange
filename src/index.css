@@ -11,6 +11,33 @@ span {
   text-transform: uppercase;
 }
 
+.cf::before {
+  content: '';
+  display: table;
+}
+
+.cf::after {
+  clear: both;
+}
+
+.control-button-group {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+}
+.control-buttons {
+
+  align-items: flex-start;
+  text-align: center;
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+}
+
 .control-item {
   position: relative;
   width: 100%;
@@ -25,8 +52,9 @@ span {
 }
 
 .notice {
-  margin: 20px 0;
   color: #666;
+  margin: 0;
+  text-align: left;
 }
 
 .tesla-car {
@@ -49,21 +77,14 @@ span {
   padding-right: 40px;
 }
 
+/* //! ---Remove after panel is complete---  */
 .tesla-controls::before {
   display: table;
 }
 .tesla-controls::after {
   clear: both;
 }
-
-cf::before {
-  content: '';
-  display: table;
-}
-
-cf::after {
-  clear: both;
-}
+/* //! -------------------------- */
 
 .tesla-control-text { 
   font-family: 'Roboto';
@@ -78,11 +99,6 @@ cf::after {
   width: 230px;
 }
 
-
-/* .tesla-panel {
-  float: left;
-  width: 230px;
-} */
 .tesla-controls::before, .tesla-controls::after {
   content: '';
   display: table;
@@ -93,22 +109,9 @@ cf::after {
   margin: -70px 0 30px;
 }
 
-.control-button-group {
-  position: absolute;
-  right: 10px;
-  top: 7px;
-}
-.control-buttons {
-
-  align-items: flex-start;
-  text-align: center;
-  text-rendering: auto;
-  color: initial;
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
+.tesla-wheels {
+  float: left;
+  width: 355px;
 }
 
 .wrapper {

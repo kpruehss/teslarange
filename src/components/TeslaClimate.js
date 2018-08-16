@@ -5,7 +5,7 @@ import ClimateButton from './ClimateButton';
 
 export default () => {
   return (
-    <div className="tesla-climate">
+    <div className="tesla-climate cf">
       <TeslaCounter 
         title="Outside Temperature"
         step="10"
@@ -13,7 +13,6 @@ export default () => {
         max="40"
         value="20"
         unit="°" />
-      <ClimateButton />
     </div>
   );
 };

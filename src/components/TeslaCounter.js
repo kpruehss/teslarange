@@ -1,13 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import ControlButton from 'components/ControlButton';
 
-const ControlTitle = styled.p`
-  letter-spacing: 2px;
-  font-size: 16px;
-  text-align: left;
-  margin: 0;
-`;
+import ControlTitle from './ControlTitle';
+import ControlButton from 'components/ControlButton';
 
 const ControlContainer = styled.div`
   margin: 10px 0 0;

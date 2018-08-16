@@ -15,7 +15,8 @@ const TeslaPanel =  props => {
         min="45"
         max="75"
         value="55"
-        unit="mph" />
+        unit="mph"
+        tabindex="0" />
       <TeslaClimate />
     </div>
   );
