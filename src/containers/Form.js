@@ -6,6 +6,7 @@ import StatTable from '../components/StatTable';
 
 import data from 'data.json';
 import TeslaControl from 'containers/TeslaControl';
+import Disclaimer from '../components/Disclaimer';
 
 // const StyledForm = styled.form`
 //   text-align: center;
@@ -37,6 +38,7 @@ class Form extends Component {
         <StyledH1>Range Per Charge</StyledH1>
         <TeslaCar />
         <TeslaControl data={this.state} />
+        <Disclaimer />
       </form>
     );
   }

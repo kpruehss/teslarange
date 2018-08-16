@@ -3,6 +3,14 @@ html body {
   padding: 0;
 }
 
+span {
+  position: absolute;
+  top: 0;
+  left: 35px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
 .tesla-car {
   text-align: center;
   width: 1050px;
@@ -14,33 +22,64 @@ html body {
   color: #666;
 }
 
-/* .tesla-controls {
+.tesla-controls {
   display: block;
   width: 100%;
-} */
+}
 
-/* .speed-counter {
-  outline: 0;
-  width: 30px;
-  color: #008dff;
-  cursor: pointer;
-  display: block;
-  padding: 11px 0;
-  border: 0;
-  background-size: 60%;
-  background-position: center;
+.tesla-controls::before {
+  display: table;
+}
+.tesla-controls::after {
+  clear: both;
+}
+
+.tesla-control-text { 
+  font-family: 'Roboto';
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 400;
+    position: relative;
+}
+
+.control-item {
+  position: relative;
+  width: 100%;
+  height: 65px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 18px 0 0 30px;
+  margin: 0 8px 0 0;
+  background-color: #f7f7f7;
   background-repeat: no-repeat;
-  background-color: transparent;
-} */
+  background-size: 44px;
+}
+.tesla-container {
+  margin: 10px 0 0;
+  padding-right: 40px;
+}
+
+.tesla-panel {
+  float: left;
+  width: 230px;
+}
+.tesla-controls::before, .tesla-controls::after {
+  content: '';
+  display: table;
+}
+
 
 .tesla-stats {
   margin: -70px 0 30px;
 }
 
-.control-buttons {
+.control-button-group {
   position: absolute;
   right: 10px;
   top: 7px;
+}
+.control-buttons {
+
   align-items: flex-start;
   text-align: center;
   text-rendering: auto;
@@ -55,13 +94,6 @@ html body {
 .wrapper {
   margin: 100px 0 150px;
 }
-.container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -72,19 +104,19 @@ html body {
 }
 
 p {
-    display: block;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
 }
 /* @font-face {
   font-family: 'RobotoNormal';
   src: url('Roboto-Regular-webfont.eot');
   src: url('Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('Roboto-Regular-webfont.woff') format('woff'),
-       url('Roboto-Regular-webfont.ttf') format('truetype'),
-       url('Roboto-Regular-webfont.svg#RobotoRegular') format('svg');
+  url('Roboto-Regular-webfont.woff') format('woff'),
+  url('Roboto-Regular-webfont.ttf') format('truetype'),
+  url('Roboto-Regular-webfont.svg#RobotoRegular') format('svg');
   font-weight: normal;
   font-style: normal;
 } */
@@ -99,14 +131,28 @@ p {
 
 /* .cf:before,
 .cf:after {
-    content: '';
-    display: table;
+  content: '';
+  display: table;
 }
 
 .cf:after {
-    clear: both;
+  clear: both;
 }
 
 .cf {
   *zoom: 1;
+} */
+
+/* .speed-counter {
+  outline: 0;
+  width: 30px;
+  color: #008dff;
+  cursor: pointer;
+  display: block;
+  padding: 11px 0;
+  border: 0;
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
 } */

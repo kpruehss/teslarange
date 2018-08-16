@@ -5,7 +5,10 @@ import upSvg from 'assets/up.svg';
 import downSvg from 'assets/down.svg';
 
 const Button = styled.button`
-  background-image: ${props => props.up ? (`url(${upSvg}); border-bottom: 1px solid #fff`) : (`url(${downSvg}); border-top: 1px solid #fff`)};
+  background-image: ${props => props.up ? 
+    `url(${upSvg});` : `url(${downSvg});`};
+  border-bottom: ${props => props.up ? '1px solid #fff;' : ''};
+  border-top: ${props => props.up ? '' : '1px solid #fff;'};
   outline: 0;
   width: 30px;
   color: #008dff;
