@@ -11,37 +11,6 @@ span {
   text-transform: uppercase;
 }
 
-.tesla-car {
-  text-align: center;
-  width: 1050px;
-  margin: 0 auto;
-}
-
-.notice {
-  margin: 20px 0;
-  color: #666;
-}
-
-.tesla-controls {
-  display: block;
-  width: 100%;
-}
-
-.tesla-controls::before {
-  display: table;
-}
-.tesla-controls::after {
-  clear: both;
-}
-
-.tesla-control-text { 
-  font-family: 'Roboto';
-    font-size: 25px;
-    line-height: 25px;
-    font-weight: 400;
-    position: relative;
-}
-
 .control-item {
   position: relative;
   width: 100%;
@@ -54,15 +23,66 @@ span {
   background-repeat: no-repeat;
   background-size: 44px;
 }
+
+.notice {
+  margin: 20px 0;
+  color: #666;
+}
+
+.tesla-car {
+  text-align: center;
+  width: 1050px;
+  margin: 0 auto;
+}
+
+.tesla-climate {
+  float: left;
+  width: 420px;
+  padding: 0 40px;
+  margin: 0 40px 0 0;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
 .tesla-container {
   margin: 10px 0 0;
   padding-right: 40px;
 }
 
-.tesla-panel {
+.tesla-controls::before {
+  display: table;
+}
+.tesla-controls::after {
+  clear: both;
+}
+
+cf::before {
+  content: '';
+  display: table;
+}
+
+cf::after {
+  clear: both;
+}
+
+.tesla-control-text { 
+  font-family: 'Roboto';
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 400;
+    position: relative;
+}
+
+.tesla-counter {
   float: left;
   width: 230px;
 }
+
+
+/* .tesla-panel {
+  float: left;
+  width: 230px;
+} */
 .tesla-controls::before, .tesla-controls::after {
   content: '';
   display: table;
@@ -110,49 +130,3 @@ p {
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
 }
-/* @font-face {
-  font-family: 'RobotoNormal';
-  src: url('Roboto-Regular-webfont.eot');
-  src: url('Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-  url('Roboto-Regular-webfont.woff') format('woff'),
-  url('Roboto-Regular-webfont.ttf') format('truetype'),
-  url('Roboto-Regular-webfont.svg#RobotoRegular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-} */
-
-/* *, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font: 300 14px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-} */
-
-/* .cf:before,
-.cf:after {
-  content: '';
-  display: table;
-}
-
-.cf:after {
-  clear: both;
-}
-
-.cf {
-  *zoom: 1;
-} */
-
-/* .speed-counter {
-  outline: 0;
-  width: 30px;
-  color: #008dff;
-  cursor: pointer;
-  display: block;
-  padding: 11px 0;
-  border: 0;
-  background-size: 60%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: transparent;
-} */

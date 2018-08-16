@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import ControlButton from '../components/ControlButton';
-import ClimateButton from '../components/ClimateButton';
 import TeslaPanel from '../components/TeslaPanel';
 
 class TeslaControl extends Component {
@@ -12,7 +9,7 @@ class TeslaControl extends Component {
   render() {
 
     return (
-      <div className="tesla-controls">
+      <div className="tesla-controls cf">
         <TeslaPanel />
       </div>
     );

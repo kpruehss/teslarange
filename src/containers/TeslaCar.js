@@ -47,6 +47,7 @@ const Result = styled.p `
   font-weight: normal;
   font-family: 'Roboto';
   display: block;
+  margin: 0;
   padding: 0 18px 0 0;
   position: relative;
   color: #008dff;
@@ -64,7 +65,7 @@ const Result = styled.p `
 
 // TODO: Add wheels and refactor into StatsTable Component
 
-const TeslaCar = () => {
+const TeslaCar = props => {
   return (
     <div>
       <Car />

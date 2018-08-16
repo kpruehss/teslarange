@@ -17,8 +17,14 @@ const Label = styled.label`
   `;
 
 const Icon = styled.i`
+  display: block;
   background-image: url(${fan});
-  `;
+  width: 22px;
+  height: 22px;
+  margin: 8px auto 0;
+  background-repeat: no-repeat;
+  background-position: center;
+`;
 
 const P = styled.p`
   margin: 14px 0 0;

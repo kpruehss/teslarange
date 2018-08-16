@@ -37,7 +37,7 @@ class Form extends Component {
       <form className="tesla-car">
         <StyledH1>Range Per Charge</StyledH1>
         <TeslaCar />
-        <TeslaControl data={this.state} />
+        <TeslaControl />
         <Disclaimer />
       </form>
     );
