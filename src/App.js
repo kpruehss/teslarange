@@ -6,6 +6,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        // TODO: Wrap in context provider for state management
         <Header />
         <div className="wrapper">
           <Form />

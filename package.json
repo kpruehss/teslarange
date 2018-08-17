@@ -1,6 +1,7 @@
 {
   "name": "teslarange",
   "version": "0.1.0",
+  "homepage": "https://kpruehss.github.io/teslarange",
   "private": true,
   "dependencies": {
     "react": "^16.4.2",
@@ -10,12 +11,14 @@
   },
   "scripts": {
     "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "eslint-plugin-prettier": "^2.6.2"
+    "eslint-plugin-prettier": "^2.6.2",
+    "gh-pages": "^1.2.0"
   }
 }
