@@ -53,7 +53,7 @@ span {
 
 .notice {
   color: #666;
-  margin: 0;
+  margin: 20px 0;
   text-align: left;
 }
 
@@ -104,6 +104,9 @@ span {
   display: table;
 }
 
+.tesla-panel {
+  text-align: left;
+}
 
 .tesla-stats {
   margin: -70px 0 30px;
@@ -112,6 +115,28 @@ span {
 .tesla-wheels {
   float: left;
   width: 355px;
+}
+
+.tesla-wheels-item {
+  cursor: pointer;
+  width: 47%;
+  height: 65px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 20px 0 0 90px;
+  margin: 0 8px 0 0;
+  background-color: #f7f7f7;
+  background-position: 24.21053% 9px;
+  background-repeat: no-repeat;
+  background-size: 44px;
+}
+
+
+.tesla-wheels-item p {
+  font-family: 'RobotoNormal';
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
 }
 
 .wrapper {

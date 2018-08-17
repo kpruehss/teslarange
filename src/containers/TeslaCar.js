@@ -63,7 +63,7 @@ const Result = styled.p `
   };
 `;
 
-// TODO: Add wheels and refactor into StatsTable Component
+// TODO: Refactor Results component to accept props
 
 const TeslaCar = props => {
   return (

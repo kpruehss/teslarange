@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TeslaPanel from '../components/TeslaPanel';
+import TeslaPanel from './TeslaPanel';
 
 class TeslaControl extends Component {
   constructor(props) {
@@ -10,25 +10,9 @@ class TeslaControl extends Component {
 
     return (
       <div className="tesla-controls cf">
-        <TeslaPanel />
+        <TeslaPanel data={this.props}/>
       </div>
     );
   }
 }
 export default TeslaControl;
-
-{/* <TeslaPanel>
-          <ControlTitle>Speed</ControlTitle>
-          <ControlItem className="control-buttons">
-            <ControlButton up />
-            <ControlButton />
-          </ControlItem>
-        </TeslaPanel>
-        <TeslaClimate>
-          <ControlTitle>Outside Temperature</ControlTitle>
-          <ControlItem className="control-buttons">
-            <ControlButton up />
-            <ControlButton />
-          </ControlItem>
-          <ClimateButton />
-        </TeslaClimate> */}
