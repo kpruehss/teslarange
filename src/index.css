@@ -113,6 +113,11 @@ body#bg-image::after {
   bottom: 20px;
 }
 
+.wheel-selector {
+  display: flex;
+  width: 100%;
+}
+
 #controls {
   width: 900px;
   margin: 6vh auto;

@@ -2,6 +2,7 @@ import React from 'react';
 
 import Control from './Control';
 import ClimateControl from './ControlClimate';
+import Wheel from './ControlWheelSize';
 
 
 const RangeControl = props => {
@@ -12,6 +13,7 @@ const RangeControl = props => {
       <Control heading="Speed" unit="mph" />
       <Control heading="Outside Temperature" unit="°" />
       <ClimateControl />
+      <Wheel heading="Wheel Size" />
     </div>
   );
 };
