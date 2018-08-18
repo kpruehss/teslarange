@@ -1,160 +1,23 @@
-html body {
+body {
+  background: #000;
+  height: 100%;
   margin: 0;
-  padding: 0;
 }
 
-span {
+body#bg-image {
+    background: url(assets/tesla.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+body#bg-image::after {
+  content: '';
   position: absolute;
   top: 0;
-  left: 35px;
-  font-size: 15px;
-  text-transform: uppercase;
-}
-
-.cf::before {
-  content: '';
-  display: table;
-}
-
-.cf::after {
-  clear: both;
-}
-
-.control-button-group {
-  position: absolute;
-  right: 10px;
-  top: 7px;
-}
-.control-buttons {
-
-  align-items: flex-start;
-  text-align: center;
-  text-rendering: auto;
-  color: initial;
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-}
-
-.control-item {
-  position: relative;
+  right: 0;
   width: 100%;
-  height: 65px;
-  border: 1px solid #ccc;
-  display: inline-block;
-  padding: 18px 0 0 30px;
-  margin: 0 8px 0 0;
-  background-color: #f7f7f7;
-  background-repeat: no-repeat;
-  background-size: 44px;
-}
-
-.notice {
-  color: #666;
-  margin: 20px 0;
-  text-align: left;
-}
-
-.tesla-car {
-  text-align: center;
-  width: 1050px;
-  margin: 0 auto;
-}
-
-.tesla-climate {
-  float: left;
-  width: 420px;
-  padding: 0 40px;
-  margin: 0 40px 0 0;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-}
-
-.tesla-container {
-  margin: 10px 0 0;
-  padding-right: 40px;
-}
-
-/* //! ---Remove after panel is complete---  */
-.tesla-controls::before {
-  display: table;
-}
-.tesla-controls::after {
-  clear: both;
-}
-/* //! -------------------------- */
-
-.tesla-control-text { 
-  font-family: 'Roboto';
-    font-size: 25px;
-    line-height: 25px;
-    font-weight: 400;
-    position: relative;
-}
-
-.tesla-counter {
-  float: left;
-  width: 230px;
-}
-
-.tesla-controls::before, .tesla-controls::after {
-  content: '';
-  display: table;
-}
-
-.tesla-panel {
-  text-align: left;
-}
-
-.tesla-stats {
-  margin: -70px 0 30px;
-}
-
-.tesla-wheels {
-  float: left;
-  width: 355px;
-}
-
-.tesla-wheels-item {
-  cursor: pointer;
-  width: 47%;
-  height: 65px;
-  border: 1px solid #ccc;
-  display: inline-block;
-  padding: 20px 0 0 90px;
-  margin: 0 8px 0 0;
-  background-color: #f7f7f7;
-  background-position: 24.21053% 9px;
-  background-repeat: no-repeat;
-  background-size: 44px;
-}
-
-
-.tesla-wheels-item p {
-  font-family: 'RobotoNormal';
-  font-size: 16px;
-  font-weight: 400;
-  color: #333;
-}
-
-.wrapper {
-  margin: 100px 0 150px;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font: 300 14px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-
-p {
-  display: block;
-  -webkit-margin-before: 1em;
-  -webkit-margin-after: 1em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
+  height: 100%;
+  background: rgba(140, 140, 140, 0.9);
+  z-index: -1; 
 }
