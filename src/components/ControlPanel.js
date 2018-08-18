@@ -1,5 +1,7 @@
 import React from 'react';
+
 import Control from './Control';
+import ClimateControl from './ControlClimate';
 
 
 const RangeControl = props => {
@@ -9,7 +11,7 @@ const RangeControl = props => {
     <div className="control-panel">
       <Control heading="Speed" unit="mph" />
       <Control heading="Outside Temperature" unit="°" />
-      <Control heading="Wheel Size" unit='"' />
+      <ClimateControl />
     </div>
   );
 };

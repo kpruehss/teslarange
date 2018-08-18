@@ -2,7 +2,8 @@ body {
   background: #fff;
   height: 100%;
   margin: 0;
-  font-family: 'Roboto'
+  font-family: 'Roboto';
+  overflow: hidden;
 }
 
 body#bg-image {
@@ -45,6 +46,27 @@ body#bg-image::after {
   height: 65px;
   width: 230px;
   margin: 0 10px;
+}
+
+.climate-control {
+  background-color: #33a0ff;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin: 0 10px;
+  display: flex-wrap;
+}
+
+.climate-control p {
+  color: #fff;
+  margin: 22px 25px 0;
+}
+
+.climate-control img {
+  width: 22px;
+  height: 22px;
+  margin: 10px 38px 25px;
 }
 
 .control-buttons {
