@@ -7,13 +7,20 @@ import T75 from 'assets/75.svg';
 import T75d from 'assets/75d.svg';
 import T90d from 'assets/90d.svg';
 import P100d from 'assets/p100d.svg';
-import RangeDisplay from '../components/RangeDisplay';
+import RangeDisplay from 'components/RangeDisplay';
+import RangeControl from 'components/ControlPanel';
 
 class BatteryRange extends Component {
   constructor() {
     super();
 
-    this.state = {data}
+    this.state = {
+      data,
+      TireFlag: false,
+      acFlag: false,
+      temperature: '',
+      speed: ''
+    }
     ;
   }
   render() {
@@ -49,6 +56,7 @@ class BatteryRange extends Component {
         {teslaModels.map(model => {
           return <RangeDisplay key={model.id} model={model.image} range="246" />;
         })}
+        <RangeControl />
       </main>
     );
   }
