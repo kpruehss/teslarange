@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
+import BatteryRange from './containers/BatteryRange';
 
 class App extends Component {
   componentWillMount() {
@@ -9,6 +10,7 @@ class App extends Component {
     return (
       <div>
         <Header/>
+        <BatteryRange />
       </div>
     );
   }
