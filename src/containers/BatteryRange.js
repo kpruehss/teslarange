@@ -7,27 +7,48 @@ import T75 from 'assets/75.svg';
 import T75d from 'assets/75d.svg';
 import T90d from 'assets/90d.svg';
 import P100d from 'assets/p100d.svg';
+import RangeDisplay from '../components/RangeDisplay';
 
 class BatteryRange extends Component {
   constructor() {
     super();
 
-    const teslaModels = { 
-      '60': T60,
-      '60d': T60d,
-      '75': T75,
-      '75d': T75d,
-      '90d': T90d,
-      'P100d': P100d,
-    };
-    this.state = [
-      {data}, { teslaModels }
-    ];
+    this.state = {data}
+    ;
   }
   render() {
+    // const { model } = this.state[1].teslaModels;
+    const teslaModels = [
+      { 
+        'image': T60,
+        'id': 1
+      },
+      { 
+        'image': T60d,
+        'id': 2
+      },
+      { 
+        'image': T75,
+        'id': 3
+      },
+      { 
+        'image': T75d,
+        'id': 4
+      },
+      { 
+        'image': T90d,
+        'id': 5
+      },
+      { 
+        'image': P100d,
+        'id': 6
+      },
+    ];
     return (
       <main id="controls">
-        {/* <RangeDisplay /> */}
+        {teslaModels.map(model => {
+          return <RangeDisplay key={model.id} model={model.image} range="246" />;
+        })}
       </main>
     );
   }

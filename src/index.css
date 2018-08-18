@@ -1,7 +1,8 @@
 body {
-  background: #222;
+  background: #fff;
   height: 100%;
   margin: 0;
+  font-family: 'Roboto'
 }
 
 body#bg-image {
@@ -18,6 +19,36 @@ body#bg-image::after {
   right: 0;
   width: 100%;
   height: 100%;
-  background: rgba(34, 34, 34, 0.9);
+  background: rgba(141, 140, 140, 0.09);
   z-index: -1; 
+}
+
+.display-item {
+  width: 130px;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.model-image {
+  height: 20px;
+  width: 100%;
+}
+
+.range {
+  color: #008dff;
+  font-size: 40px;
+}
+
+.range::after {
+  font-size: 0.4em;
+  font-weight: normal;
+  font-family: 'Roboto';
+  content: 'MI';
+  position: relative;
+  bottom: 20px;
+}
+
+#controls {
+  width: 900px;
+  margin: 6vh auto;
 }
