@@ -9,6 +9,7 @@ import T90d from 'assets/90d.svg';
 import P100d from 'assets/p100d.svg';
 import RangeDisplay from 'components/RangeDisplay';
 import RangeControl from 'components/ControlPanel';
+import Disclaimer from '../components/Disclaimer';
 
 class BatteryRange extends Component {
   constructor() {
@@ -57,6 +58,7 @@ class BatteryRange extends Component {
           return <RangeDisplay key={model.id} model={model.image} range="246" />;
         })}
         <RangeControl />
+        <Disclaimer />
       </main>
     );
   }

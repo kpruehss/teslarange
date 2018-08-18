@@ -26,7 +26,7 @@ body#bg-image::after {
 
 .control-panel {
   display: flex;
-  margin: 58vh auto;
+  margin: 55vh auto 0;
   width: 1000px;
 }
 
@@ -39,7 +39,7 @@ body#bg-image::after {
 .control-item {
   font-size: 1.5rem;
   border: 1px solid #ccc;
-  background-color: #dad8d8;
+  background-color: #dad8d88c;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,6 +94,12 @@ body#bg-image::after {
   padding: 0 10px;
 }
 
+.notice {
+  font-size: 15px;
+  color: #666;
+  line-height: 20px;
+}
+
 .model-image {
   height: 20px;
   width: 100%;
@@ -115,7 +121,12 @@ body#bg-image::after {
 
 .wheel-selector {
   display: flex;
+  justify-content: space-between;
   width: 100%;
+}
+
+.wheel-selector img {
+  margin-right: 15px;
 }
 
 #controls {

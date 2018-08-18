@@ -3,6 +3,7 @@ import React from 'react';
 import Control from './Control';
 import ClimateControl from './ControlClimate';
 import Wheel from './ControlWheelSize';
+import Disclaimer from './Disclaimer';
 
 
 const RangeControl = props => {
