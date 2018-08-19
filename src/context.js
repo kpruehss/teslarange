@@ -24,7 +24,7 @@ const reducer = (state, action) => {
     case CHANGE_AC:
       return {
         ...state,
-        temperature: action.payload
+        acFlag: action.payload
       }
     case CHANGE_TIRESIZE:
       return {

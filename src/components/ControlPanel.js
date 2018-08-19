@@ -1,16 +1,16 @@
 import React from 'react';
 
 import Control from './Control';
-import ClimateControl from './ControlClimate';
+import ControlClimate from './ControlClimate';
 import Wheel from './ControlWheelSize';
 
 
-const RangeControl = props => {
+const RangeControl = () => {
   return (
     <div className="control-panel">
       <Control heading="Speed" unit="mph" reading="speed" />
       <Control heading="Outside Temperature" unit="°" reading="temperature" />
-      <ClimateControl />
+      <ControlClimate />
       <Wheel heading="Wheel Size" />
     </div>
   );

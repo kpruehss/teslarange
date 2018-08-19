@@ -1,15 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Consumer } from 'context';
+import { CHANGE_AC } from 'actionTypes';
 
-import acOn from 'assets/ac-on.svg';
-import acOff from 'assets/ac-off.svg';
+class ControlClimate extends Component {
 
-const ClimateControl = props => {
-  return (
-    <div className="climate-control">
-      <p>AC ON</p>
-      <img src={acOn} alt="fan"/>
-    </div>
-  );
-};
+  clickHandler = (acFlag, dispatch) => {
+    dispatch({type: CHANGE_AC, payload: acFlag === 'on' ? 'off' : 'on'})
+  }
 
-export default ClimateControl;
+  render() {
+    return (
+      <Consumer>
+        {value => {
+          const { dispatch, acFlag } = value;
+          return(
+            <div className="climate-control" 
+              onClick={this.clickHandler.bind(this, acFlag, dispatch)}>
+              <p>ac { acFlag }</p>
+              <i className="climate-icon"></i>
+            </div>
+          );
+        }}
+      </Consumer>
+    );
+  }
+}
+
+
+export default ControlClimate;
