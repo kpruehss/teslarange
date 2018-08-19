@@ -7,10 +7,11 @@ import T75 from 'assets/75.svg';
 import T75d from 'assets/75d.svg';
 import T90d from 'assets/90d.svg';
 import P100d from 'assets/p100d.svg';
+import car from 'assets/tesla.jpg';
 import RangeDisplay from 'components/RangeDisplay';
 import RangeControl from 'components/ControlPanel';
-import Disclaimer from '../components/Disclaimer';
-import { Consumer } from '../context';
+import Disclaimer from 'components/Disclaimer';
+import { Consumer } from 'context';
 
 class BatteryRange extends Component {
 
@@ -53,17 +54,20 @@ class BatteryRange extends Component {
         {value => {
           return (
             <main id="controls">
-              {teslaModels.map(model => {
-                return <RangeDisplay 
-                  key={model.model}
-                  model={model.image}
-                  range={this.renderRange(
-                    model.model,
-                    value.wheelSize,
-                    value.acFlag,
-                    value.speed,
-                    value.temperature)} />;
-              })}
+              <div className="container">
+                {teslaModels.map(model => {
+                  return <RangeDisplay 
+                    key={model.model}
+                    model={model.image}
+                    range={this.renderRange(
+                      model.model,
+                      value.wheelSize,
+                      value.acFlag,
+                      value.speed,
+                      value.temperature)} />;
+                })}
+              </div>
+              <img src={car} alt='car' className="car" />
               <RangeControl />
               <Disclaimer />
             </main>
