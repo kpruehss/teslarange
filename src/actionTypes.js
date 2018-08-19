@@ -1,0 +1,4 @@
+export const CHANGE_SPEED = 'CHANGE_SPEED';
+export const CHANGE_TEMPERATURE = 'CHANGE_TEMPERATURE';
+export const CHANGE_AC = 'CHANGE_AC';
+export const CHANGE_TIRESIZE = 'CHANGE_TIRESIZE';

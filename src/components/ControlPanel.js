@@ -6,8 +6,6 @@ import Wheel from './ControlWheelSize';
 
 
 const RangeControl = props => {
-  const { speed } = props;
-
   return (
     <div className="control-panel">
       <Control heading="Speed" unit="mph" />

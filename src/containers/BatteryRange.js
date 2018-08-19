@@ -10,35 +10,9 @@ import P100d from 'assets/p100d.svg';
 import RangeDisplay from 'components/RangeDisplay';
 import RangeControl from 'components/ControlPanel';
 import Disclaimer from '../components/Disclaimer';
+import { Consumer } from '../context';
 
 class BatteryRange extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      ...data,
-      tireSize: '19',
-      acFlag: 'on',
-      temperature: '20',
-      speed: '55'
-    };
-  }
-  
-  setTireSize(tireSize) {
-    this.setState({tireSize});
-  }
-
-  setAc(acFlag) {
-    this.setState({acFlag});
-  }
-
-  setTemperature(temperature) {
-    this.setState({temperature});
-  }
-
-  setSpeed(speed) {
-    this.setState({speed});
-  }
 
   renderRange(model, tireSize, acFlag, speed, temperature) {
     return (
@@ -74,22 +48,28 @@ class BatteryRange extends Component {
       },
     ];
     
-    return (
-      <main id="controls">
-        {teslaModels.map(model => {
-          return <RangeDisplay 
-            key={model.model}
-            model={model.image}
-            range={this.renderRange(
-              model.model,
-              this.state.tireSize,
-              this.state.acFlag,
-              this.state.speed,
-              this.state.temperature)} />;
-        })}
-        <RangeControl />
-        <Disclaimer />
-      </main>
+    return(
+      <Consumer>
+        {value => {
+          return (
+            <main id="controls">
+              {teslaModels.map(model => {
+                return <RangeDisplay 
+                  key={model.model}
+                  model={model.image}
+                  range={this.renderRange(
+                    model.model,
+                    value.tireSize,
+                    value.acFlag,
+                    value.speed,
+                    value.temperature)} />;
+              })}
+              <RangeControl />
+              <Disclaimer />
+            </main>
+          );
+        }}
+      </Consumer>
     );
   }
 }
