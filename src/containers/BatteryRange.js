@@ -23,6 +23,22 @@ class BatteryRange extends Component {
       speed: '55'
     };
   }
+  
+  setTireSize(tireSize) {
+    this.setState({tireSize});
+  }
+
+  setAc(acFlag) {
+    this.setState({acFlag});
+  }
+
+  setTemperature(temperature) {
+    this.setState({temperature});
+  }
+
+  setSpeed(speed) {
+    this.setState({speed});
+  }
 
   renderRange(model, tireSize, acFlag, speed, temperature) {
     return (
@@ -60,10 +76,6 @@ class BatteryRange extends Component {
     
     return (
       <main id="controls">
-        { 
-          console.log(this.state[60][19]['on']['speed'][45][20])
-        }
-
         {teslaModels.map(model => {
           return <RangeDisplay 
             key={model.model}

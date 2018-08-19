@@ -4,7 +4,7 @@ import data from 'data.json';
 const Context = React.createContext();
 
 export class Provider extends Component {
-  state = {data};
+  state = {...data};
 
   render() {
     return (
