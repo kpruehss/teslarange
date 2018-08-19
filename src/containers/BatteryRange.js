@@ -16,46 +16,64 @@ class BatteryRange extends Component {
     super();
 
     this.state = {
-      data,
-      TireFlag: false,
-      acFlag: false,
-      temperature: '',
-      speed: ''
-    }
-    ;
+      ...data,
+      tireSize: '19',
+      acFlag: 'on',
+      temperature: '20',
+      speed: '55'
+    };
   }
+
+  renderRange(model, tireSize, acFlag, speed, temperature) {
+    return (
+      data[model][tireSize][acFlag]['speed'][speed][temperature]
+    );
+  }
+
   render() {
-    // const { model } = this.state[1].teslaModels;
     const teslaModels = [
       { 
         'image': T60,
-        'id': 1
+        'model': '60'
       },
       { 
         'image': T60d,
-        'id': 2
+        'model': '60D'
       },
       { 
         'image': T75,
-        'id': 3
+        'model': '75'
       },
       { 
         'image': T75d,
-        'id': 4
+        'model': '75D'
       },
       { 
         'image': T90d,
-        'id': 5
+        'model': '90D'
       },
       { 
         'image': P100d,
-        'id': 6
+        'model': 'P100D'
       },
     ];
+    
     return (
       <main id="controls">
+        { 
+          console.log(this.state[60][19]['on']['speed'][45][20])
+        }
+
         {teslaModels.map(model => {
-          return <RangeDisplay key={model.id} model={model.image} range="246" />;
+          return <RangeDisplay 
+            key={model.model}
+            model={model.image}
+            range={this.renderRange(
+              model.model,
+              this.state.tireSize,
+              this.state.acFlag,
+              this.state.speed,
+              this.state.temperature)} />;
         })}
         <RangeControl />
         <Disclaimer />

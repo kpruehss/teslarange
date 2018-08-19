@@ -1,12 +1,13 @@
 import React from 'react';
 
-import fan from 'assets/ac-on.svg';
+import acOn from 'assets/ac-on.svg';
+import acOff from 'assets/ac-off.svg';
 
-const ClimateControl = () => {
+const ClimateControl = props => {
   return (
     <div className="climate-control">
       <p>AC ON</p>
-      <img src={fan} alt="fan"/>
+      <img src={acOn} alt="fan"/>
     </div>
   );
 };

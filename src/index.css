@@ -49,17 +49,19 @@ body#bg-image::after {
 }
 
 .climate-control {
-  background-color: #33a0ff;
-  border: 6px solid #fff;
+  /* background-color: #33a0ff; */
+  background-color: #fff;
+  border: 6px solid #f7f7f7;
   border-radius: 50%;
   height: 100px;
   width: 100px;
   margin: 0 10px;
   display: flex-wrap;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .climate-control p {
-  color: #fff;
+  color: rgb(134, 132, 132);
   margin: 22px 25px 0;
 }
 
