@@ -4,7 +4,7 @@ import {
   CHANGE_SPEED,
   CHANGE_TEMPERATURE,
   CHANGE_AC, 
-  CHANGE_TIRESIZE 
+  CHANGE_WHEELSIZE 
 } from 'actionTypes'
 
 const Context = React.createContext();
@@ -26,10 +26,10 @@ const reducer = (state, action) => {
         ...state,
         acFlag: action.payload
       }
-    case CHANGE_TIRESIZE:
+    case CHANGE_WHEELSIZE:
       return {
         ...state,
-        tireSize: action.payload
+        wheelSize: action.payload
       }
     default:
       return state;
@@ -38,7 +38,7 @@ const reducer = (state, action) => {
 export class Provider extends Component {
   state = {
     ...data,
-    tireSize: '19',
+    wheelSize: '19',
     acFlag: 'on',
     temperature: '20',
     speed: '55',

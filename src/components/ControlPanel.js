@@ -11,7 +11,7 @@ const RangeControl = () => {
       <Control heading="Speed" unit="mph" reading="speed" />
       <Control heading="Outside Temperature" unit="°" reading="temperature" />
       <ControlClimate />
-      <Wheel heading="Wheel Size" />
+      <Wheel heading="Wheel Size" reading="wheelSize" />
     </div>
   );
 };

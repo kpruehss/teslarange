@@ -147,6 +147,11 @@ body#bg-image::after {
   margin-right: 15px;
 }
 
+.wheel-active {
+  border-color: #39f;
+  box-shadow: inset 0px 0px 0px 1px #39f;
+}
+
 #controls {
   width: 900px;
   margin: 6vh auto;

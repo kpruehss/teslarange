@@ -14,9 +14,9 @@ import { Consumer } from '../context';
 
 class BatteryRange extends Component {
 
-  renderRange(model, tireSize, acFlag, speed, temperature) {
+  renderRange(model, wheelSize, acFlag, speed, temperature) {
     return (
-      data[model][tireSize][acFlag]['speed'][speed][temperature]
+      data[model][wheelSize][acFlag]['speed'][speed][temperature]
     );
   }
 
@@ -59,7 +59,7 @@ class BatteryRange extends Component {
                   model={model.image}
                   range={this.renderRange(
                     model.model,
-                    value.tireSize,
+                    value.wheelSize,
                     value.acFlag,
                     value.speed,
                     value.temperature)} />;
