@@ -19,15 +19,16 @@ class Control extends Component {
     }
   };
 
-  clickHandler = (speed, temperature, unit, dispatch) => {
+  increaseClickHandler = (speed, temperature, unit, dispatch) => {
     if(unit === 'mph') {
-      if(speed > this.state.minSpeed && speed < this.state.maxSpeed) {
+      if(speed >= this.state.minSpeed && speed <= this.state.maxSpeed) {
         speed = Number(speed) + Number(this.state.speedStep);
-        dispatch({ type: CHANGE_SPEED, payload: speed });
+        dispatch({ type: CHANGE_SPEED, payload: 
+          speed > this.state.maxSpeed ? this.state.maxSpeed : speed });
       }
     } else if(unit === "°") {
-      if(temperature > this.state.minTemperature && 
-        temperature < this.state.maxTemperature) {
+      if(temperature >= this.state.minTemperature && 
+        temperature <= this.state.maxTemperature) {
 
           temperature = Number(temperature) + 
             Number(this.state.temperatureStep);
@@ -35,6 +36,25 @@ class Control extends Component {
         }
     }
   }
+
+  decreaseClickHandler = (speed, temperature, unit, dispatch) => {
+    if(unit === 'mph') {
+      if(speed >= this.state.minSpeed && speed <= this.state.maxSpeed) {
+        speed = Number(speed) - Number(this.state.speedStep);
+        dispatch({ type: CHANGE_SPEED, payload: 
+          speed < this.state.minSpeed ? this.state.minSpeed : speed });
+      }
+    } else if(unit === "°") {
+      if(temperature >= this.state.minTemperature && 
+        temperature <= this.state.maxTemperature) {
+
+          temperature = Number(temperature) - 
+            Number(this.state.temperatureStep);
+          dispatch({type: CHANGE_TEMPERATURE, payload: temperature})
+        }
+    }
+  }
+  
   
   render() {
     const { heading, unit, reading } = this.props;
@@ -51,7 +71,7 @@ class Control extends Component {
                   <img src={upArrow} 
                     alt="+" 
                     className="control-up"
-                    onClick={this.clickHandler.bind(
+                    onClick={this.increaseClickHandler.bind(
                       this, 
                       speed,
                       temperature, 
@@ -61,6 +81,12 @@ class Control extends Component {
                   <img src={downArrow}
                     alt="-" 
                     className="control-down"
+                    onClick={this.decreaseClickHandler.bind(
+                      this, 
+                      speed,
+                      temperature, 
+                      unit, 
+                      dispatch)} 
                     />
                 </div>
               </div>

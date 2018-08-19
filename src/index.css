@@ -79,9 +79,13 @@ body#bg-image::after {
 
 .control-up {
   display: block;
+  /* background-image: url(assets/up.svg); */
   border-bottom: 1px solid #fff;
+  outline: 0;
   width: 30px;
   padding-bottom: 5px;
+  background-repeat: no-repeat;
+  background-size: 60%
 }
 
 .control-down {
