@@ -32,7 +32,9 @@ class Control extends Component {
 
           temperature = Number(temperature) + 
             Number(this.state.temperatureStep);
-          dispatch({type: CHANGE_TEMPERATURE, payload: temperature})
+          dispatch({type: CHANGE_TEMPERATURE, payload:
+            temperature > this.state.maxTemperature ? 
+              this.state.maxTemperature : temperature})
         }
     }
   }
@@ -50,7 +52,9 @@ class Control extends Component {
 
           temperature = Number(temperature) - 
             Number(this.state.temperatureStep);
-          dispatch({type: CHANGE_TEMPERATURE, payload: temperature})
+          dispatch({type: CHANGE_TEMPERATURE, payload:
+            temperature < this.state.minTemperature ?
+              this.state.minTemperature : temperature})
         }
     }
   }
